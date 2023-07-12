@@ -16,7 +16,7 @@ export default function orderByProps(obj, [...keys]) {
 
   withoutProps.sort((a, b) => (a.key > b.key ? 1 : -1));
 
-  const result = [...withProps, ...withoutProps];
+  const result = withProps.concat(withoutProps);
 
   return result;
 }
